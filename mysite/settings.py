@@ -25,7 +25,7 @@ SECRET_KEY = 'c+_65=5o^x)0cf2oxphag+6-wti8b%0_am2i@o1h^n*&-lygd-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [('tanya1112.pythonanywhere.com'),]
 
 
 # Application definition
@@ -102,3 +102,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+HTTP_HOST= ('tanya1112.pythonanywhere.com')
