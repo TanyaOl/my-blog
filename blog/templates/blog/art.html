@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+ {% if case_list %}
+    <ul>
+    {% for case in case_list %}
+        <img src="{{ MEDIA_URL }}{{ case.case_preview.url }}"/>
+        <li>{{ case.case_name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cases are available.</p>
+{% endif %}
+{% endblock %}

@@ -25,6 +25,7 @@ SECRET_KEY = 'c+_65=5o^x)0cf2oxphag+6-wti8b%0_am2i@o1h^n*&-lygd-'
 DEBUG = True
 
 ALLOWED_HOSTS = [('tanya1112.pythonanywhere.com'),]
+LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -37,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'polls',
+
    )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'blog.context_processors.get_month_list',
             ],
         },
     },
@@ -82,10 +86,11 @@ DATABASES = {
 }
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'uk-ua'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Europe/Kiev'
 
@@ -96,8 +101,15 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_ROOT  =  "/blog/static/Upload/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
